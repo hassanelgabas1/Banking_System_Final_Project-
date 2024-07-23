@@ -1,0 +1,38 @@
+{
+    "transactions": [
+        {
+            "account_number": "123456",
+            "amount": 100,
+            "date": "2024-07-17"
+        },
+        {
+            "account_number": "123456",
+            "amount": -50,
+            "date": "2024-07-16"
+        }
+    ],
+    "users": [
+        {
+            "account_number": "123456",
+            "age": 25,
+            "balance": 1000,
+            "fullname": "User One",
+            "password": "pass1",
+            "username": "user1"
+        },
+        {
+            "account_number": "234567",
+            "age": 30,
+            "balance": 2000,
+            "fullname": "User Two",
+            "password": "pass2",
+            "username": "user2"
+        },
+        {
+            "account_number": "10201",
+            "balance": 621525,
+            "password": "2010",
+            "username": "ali"
+        }
+    ]
+}

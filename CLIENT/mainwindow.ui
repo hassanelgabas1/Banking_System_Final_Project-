@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Banking System</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="userTab">
+       <attribute name="title">
+        <string>User Operations</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QComboBox" name="userRequestTypeComboBox">
+          <item>
+           <property name="text">
+            <string>Get Account Number</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>View Balance</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>View Transaction History</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Make Transaction</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Transfer Amount</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="userStackedWidget">
+           <widget class="QWidget" name="emptyPage"/>
+           <widget class="QWidget" name="makeTransactionPage">
+             <layout class="QFormLayout" name="formLayout">
+               <item row="0" column="0">
+                 <widget class="QLabel" name="label_2">
+                   <property name="text">
+                     <string>Amount:</string>
+                   </property>
+                 </widget>
+               </item>
+               <item row="0" column="1">
+                 <widget class="QLineEdit" name="amountLineEdit"/>
+               </item>
+             </layout>
+           </widget>
+           <widget class="QWidget" name="transferPage">
+             <layout class="QFormLayout" name="formLayout_2">
+               <item row="0" column="0">
+                 <widget class="QLabel" name="label">
+                   <property name="text">
+                     <string>To Account Number:</string>
+                   </property>
+                 </widget>
+               </item>
+               <item row="0" column="1">
+                 <widget class="QLineEdit" name="toAccountLineEdit"/>
+               </item>
+               <item row="1" column="0">
+                 <widget class="QLabel" name="label_3">
+                   <property name="text">
+                     <string>Transfer Amount:</string>
+                   </property>
+                 </widget>
+               </item>
+               <item row="1" column="1">
+                 <widget class="QLineEdit" name="transferAmountLineEdit"/>
+               </item>
+             </layout>
+           </widget>
+           <widget class="QWidget" name="transactionHistoryPage">
+             <layout class="QFormLayout" name="formLayout_3">
+               <item row="0" column="0">
+                 <widget class="QLabel" name="label_4">
+                   <property name="text">
+                     <string>Number of Transactions:</string>
+                   </property>
+                 </widget>
+               </item>
+               <item row="0" column="1">
+                 <widget class="QSpinBox" name="transactionCountSpinBox"/>
+               </item>
+             </layout>
+           </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="userSendRequestButton">
+          <property name="text">
+           <string>Send Request</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="adminTab">
+       <attribute name="title">
+        <string>Admin Operations</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QComboBox" name="adminRequestTypeComboBox">
+          <item>
+           <property name="text">
+            <string>View Database</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Create User</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delete User</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Update User</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="adminStackedWidget">
+          <widget class="QWidget" name="viewDatabasePage"/>
+          <widget class="QWidget" name="createUserPage">
+            <layout class="QFormLayout" name="formLayout_3">
+              <item row="0" column="0">
+                <widget class="QLabel" name="label_4">
+                  <property name="text">
+                    <string>Username:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QLineEdit" name="newUsernameLineEdit"/>
+              </item>
+              <item row="1" column="0">
+                <widget class="QLabel" name="label_5">
+                  <property name="text">
+                    <string>Password:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="1">
+                <widget class="QLineEdit" name="newPasswordLineEdit"/>
+              </item>
+              <item row="2" column="0">
+                <widget class="QLabel" name="label_6">
+                  <property name="text">
+                    <string>Account Number:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="2" column="1">
+                <widget class="QLineEdit" name="accountNumberLineEdit"/>
+              </item>
+              <item row="3" column="0">
+                <widget class="QLabel" name="label_7">
+                  <property name="text">
+                    <string>Initial Balance:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="3" column="1">
+                <widget class="QLineEdit" name="initialBalanceLineEdit"/>
+              </item>
+            </layout>
+          </widget>
+          <widget class="QWidget" name="deleteUserPage">
+            <layout class="QFormLayout" name="formLayout_4">
+              <item row="0" column="0">
+                <widget class="QLabel" name="label_8">
+                  <property name="text">
+                    <string>Username to Delete:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QLineEdit" name="deleteUsernameLineEdit"/>
+              </item>
+            </layout>
+          </widget>
+          <widget class="QWidget" name="updateUserPage">
+            <layout class="QFormLayout" name="formLayout_5">
+              <item row="0" column="0">
+                <widget class="QLabel" name="label_9">
+                  <property name="text">
+                    <string>Username to Update:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QLineEdit" name="updateUsernameLineEdit"/>
+              </item>
+              <item row="1" column="0">
+                <widget class="QLabel" name="label_10">
+                  <property name="text">
+                    <string>New Password:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="1">
+                <widget class="QLineEdit" name="updatePasswordLineEdit"/>
+              </item>
+              <item row="2" column="0">
+                <widget class="QLabel" name="label_11">
+                  <property name="text">
+                    <string>New Balance:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="2" column="1">
+                <widget class="QLineEdit" name="updateBalanceLineEdit"/>
+              </item>
+            </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="adminSendRequestButton">
+          <property name="text">
+           <string>Send Admin Request</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="responseTextEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

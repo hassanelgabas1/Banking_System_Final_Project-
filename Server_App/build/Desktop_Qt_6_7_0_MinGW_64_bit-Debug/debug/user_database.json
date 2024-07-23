@@ -1,0 +1,32 @@
+{
+    "users": [
+        {
+            "username": "user1",
+            "password": "pass1",
+            "account_number": "123456",
+            "balance": 1000,
+            "fullname": "User One",
+            "age": 25
+        },
+        {
+            "username": "user2",
+            "password": "pass2",
+            "account_number": "234567",
+            "balance": 2000,
+            "fullname": "User Two",
+            "age": 30
+        }
+    ],
+    "transactions": [
+        {
+            "account_number": "123456",
+            "date": "2024-07-17",
+            "amount": 100
+        },
+        {
+            "account_number": "123456",
+            "date": "2024-07-16",
+            "amount": -50
+        }
+    ]
+}
